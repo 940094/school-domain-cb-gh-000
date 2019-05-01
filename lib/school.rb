@@ -17,7 +17,8 @@ class School
     @roster[grade] << student
   end
 
-  def grade
+  def grade(grade)
+    @roster[grade]
   end
 
   def sort
@@ -25,18 +26,13 @@ class School
 
 end
 
-#it 'is able to add multiple students to a class (grade)' do
-  #@school.add_student("Jeff Baird", 10)
-  #@school.add_student("Blake Johnson", 10)
+describe '#grade' do
+  it 'is able to retreive students from a grade' do
+    @school.add_student("Homer Simpson", 9)
+    @school.add_student("Avi Flombaum", 10)
+    @school.add_student("Jeff Baird", 10)
+    @school.add_student("Blake Johnson", 7)
 
-  #expect(@school.roster).to eq({10 => ["Jeff Baird", "Blake Johnson"]})
-#end
-
-
-#school = School.new("Bayside High School")
-
-#school.roster # => {}
-
-#school.add_student("Zach Morris", 9)
-#p school.roster
-# => {9 => ["Zach Morris"]}
+    expect(@school.grade(10)).to eq(["Avi Flombaum", "Jeff Baird"])
+  end
+end
