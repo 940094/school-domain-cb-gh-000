@@ -1,6 +1,6 @@
 # code here!
 class School
-  # attr_accessor
+  attr_accessor :add_student
   attr_reader :roster, :add_student
   STUDENTS = []
 
@@ -8,7 +8,7 @@ class School
     @roster = {}
   end
 
-  def add_student(student, grade)
+  def add_student(student, grade) # reader
     @student = student
     @grade = grade
     @roster[grade] = []
