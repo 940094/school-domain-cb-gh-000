@@ -8,10 +8,12 @@ class School
     @roster = {}
   end
 
-  def add_student(student, grade) # reader
+  def add_student(student, grade) # reader - why doesn't writer add_student=(student, grade) pass the test?
     @student = student
     @grade = grade
-    @roster[grade] = []
+    if @roster[grade] == nil
+      @roster[grade] = []
+    end
     @roster[grade] << student
   end
 
@@ -23,11 +25,12 @@ class School
 
 end
 
-#describe "#add_student" do
-  #it 'is able to add a student' do
-    #@school.add_student("AC Slater", 10)
-    #expect(@school.roster).to eq({10 => ["AC Slater"]})
-#  end
+it 'is able to add multiple students to a class (grade)' do
+  @school.add_student("Jeff Baird", 10)
+  @school.add_student("Blake Johnson", 10)
+
+  expect(@school.roster).to eq({10 => ["Jeff Baird", "Blake Johnson"]})
+end
 
 
 #school = School.new("Bayside High School")
