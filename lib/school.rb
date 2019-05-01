@@ -8,7 +8,7 @@ class School
     @roster = {}
   end
 
-  def add_student=(student, grade) # reader
+  def add_student(student, grade) # reader
     @student = student
     @grade = grade
     @roster[grade] = []
