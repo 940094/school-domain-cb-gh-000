@@ -22,10 +22,10 @@ class School
 end
 
 
-school = School.new("Bayside High School")
+#school = School.new("Bayside High School")
 
-school.roster # => {}
+#school.roster # => {}
 
-school.add_student("Zach Morris", 9)
-p school.roster
+#school.add_student("Zach Morris", 9)
+#p school.roster
 # => {9 => ["Zach Morris"]}
