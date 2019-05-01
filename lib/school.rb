@@ -11,7 +11,7 @@ class School
     p grade
     p student
     @grade = grade
-    students << student
+    @students << student
     p students
     @roster[grade] = students
   end
