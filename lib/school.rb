@@ -1,11 +1,11 @@
 # code here!
 class School
-  def initialize(roster)
+  def initialize(roster={})
     @roster = roster
   end
 
-  def add_student(student)
-    @roaster << student
+  def add_student(student, grade)
+    @roster[grade] = student
   end
 
   def grade
