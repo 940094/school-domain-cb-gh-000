@@ -9,6 +9,7 @@ class School
 
   def add_student=(student, grade)  # add students to their grade
     @roster[grade] = student
+    p @roster
     p grade
     p student
     @grade = grade
