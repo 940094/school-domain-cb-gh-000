@@ -23,6 +23,7 @@ class School
 
   def sort
     @roster.each do |key, value|  # iterate through each grade
+      p value
       p value.sort #.sort()  # call the sort method on each grade
     end
   end
