@@ -27,7 +27,7 @@ class School
       value.each do |string|
         p string.sort
       end
-      p roster #.sort()  # call the sort method on each grade
+      p @roster #.sort()  # call the sort method on each grade
     end
   end
 
