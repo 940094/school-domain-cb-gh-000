@@ -9,6 +9,8 @@ class School
   end
 
   def add_student=(student, grade)
+    p student
+    p grade
     STUDENTS << student
     @roster[grade] = STUDENTS
   end
