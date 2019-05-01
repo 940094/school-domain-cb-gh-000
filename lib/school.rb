@@ -8,7 +8,7 @@ class School
     @roster = {}
   end
 
-  def add_student=(student, gr)
+  def add_student=(student=nil, gr=nil)
     #@roster[gr] = []
     #@roster[gr] << student
   end
