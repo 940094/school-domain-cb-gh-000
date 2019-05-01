@@ -8,9 +8,11 @@ class School
     @roster = {}
   end
 
-  def add_student=(student=nil, gr=nil)
-    #@roster[gr] = []
-    #@roster[gr] << student
+  def add_student=(student, grade)
+    @student = student
+    @grade = grade
+    @roster[grade] = []
+    @roster[grade] << student
   end
 
   def grade
@@ -20,6 +22,12 @@ class School
   end
 
 end
+
+#describe "#add_student" do
+  #it 'is able to add a student' do
+    #@school.add_student("AC Slater", 10)
+    #expect(@school.roster).to eq({10 => ["AC Slater"]})
+#  end
 
 
 #school = School.new("Bayside High School")
