@@ -1,7 +1,7 @@
 # code here!
 class School
   attr_accessor :roster
-  @students = []
+  STUDENTS = []
 
   def initialize(roster={})
     @roster = {}
@@ -13,7 +13,7 @@ class School
     p grade
     p student
     @grade = grade
-    @students << student
+    STUDENTS << student
     p students
     @roster[grade] = students
   end
