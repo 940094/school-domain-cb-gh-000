@@ -23,7 +23,8 @@ class School
   end
 end
 
-roster {
-  { 9: [John, Sally] },
-  { 10: [Sam, Jill] },
-}
+###
+#roster {
+  #{ 9: [John, Sally] },
+  #{ 10: [Sam, Jill] },
+#}
